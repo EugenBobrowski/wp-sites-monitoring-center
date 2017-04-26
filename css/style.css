@@ -1,0 +1,48 @@
+.column-status {
+  width: 2em;
+  text-align: center;
+}
+.widefat .column-status {
+  padding: 11px 0 0 3px;
+}
+.column-status .status-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.column-status .status-icon:before,
+.column-status .status-icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #000000;
+}
+.column-status .status-icon:before {
+  left: 0;
+  right: 50%;
+}
+.column-status .status-icon:after {
+  left: 50%;
+  right: 0;
+}
+.column-status .status-icon.left-green:before,
+.column-status .status-icon.right-green:after {
+  background: #37d23c;
+}
+.column-status .status-icon.left-yellow:before,
+.column-status .status-icon.right-yellow:after {
+  background: #deff29;
+}
+.column-status .status-icon.left-blue:before,
+.column-status .status-icon.right-blue:after {
+  background: #2c7fff;
+}
+.column-status .status-icon.left-red:before,
+.column-status .status-icon.right-red:after {
+  background: #ff4148;
+}

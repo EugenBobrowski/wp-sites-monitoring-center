@@ -1,0 +1,48 @@
+.column-status {
+  width: 2em;
+  text-align: center;
+  .widefat & {
+    padding: 11px 0 0 3px;
+  }
+
+
+
+  .status-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: #000000;
+    }
+    &:before {
+      left: 0;
+      right: 50%;
+    }
+    &:after {
+      left: 50%;
+      right: 0;
+    }
+    &.left-green:before, &.right-green:after {
+      //background: #5cce64;
+      background: #37d23c;
+    }
+    &.left-yellow:before, &.right-yellow:after {
+      background: #deff29;
+    }
+    &.left-blue:before, &.right-blue:after {
+      background: #2c7fff;
+    }
+    &.left-red:before, &.right-red:after {
+      background: #ff4148;
+    }
+
+  }
+}
